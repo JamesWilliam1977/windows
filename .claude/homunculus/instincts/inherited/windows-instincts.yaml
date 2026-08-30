@@ -1,0 +1,415 @@
+# Instincts generated from https://github.com/JamesWilliam1977/windows
+# Generated: 2026-07-01T21:52:38.867Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: windows-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Commit Length
+
+## Action
+
+Keep commit messages concise (~44 characters)
+
+## Evidence
+
+- Average commit message length: 44 chars
+- Based on 7 commits
+
+---
+id: windows-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: windows-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: windows-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: windows-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: windows-workflow-update-preset-configuration
+trigger: "when doing update preset configuration"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Workflow Update Preset Configuration
+
+## Action
+
+Follow the update-preset-configuration workflow:
+1. Edit config/preset.json with new or updated preset values.
+2. Commit the changes with a message referencing preset updates.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: config/preset.json
+
+---
+id: windows-workflow-update-tweaks-configuration
+trigger: "when doing update tweaks configuration"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Workflow Update Tweaks Configuration
+
+## Action
+
+Follow the update-tweaks-configuration workflow:
+1. Edit config/tweaks.json to add, remove, or modify tweak entries.
+2. Commit the changes with a message referencing tweaks updates.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: config/tweaks.json
+
+---
+id: windows-workflow-update-generated-dev-docs
+trigger: "when doing update generated dev docs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/windows
+---
+
+# Windows Workflow Update Generated Dev Docs
+
+## Action
+
+Follow the update-generated-dev-docs workflow:
+1. Generate or update markdown files for each tweak in docs/content/dev/tweaks/...
+2. Commit the changes with a message referencing dev docs update.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/content/dev/tweaks/**/*.md
+
+---
+id: windows-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct File Naming
+
+## Action
+
+Name the file using PascalCase (e.g., MyFile.ts)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Consistent file naming in repository
+
+---
+id: windows-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., doSomething)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+- Consistent function naming in TypeScript files
+
+---
+id: windows-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., MyClass)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+- Consistent class naming in TypeScript files
+
+---
+id: windows-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_SIZE)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+- Consistent constant naming in TypeScript files
+
+---
+id: windows-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import x from './module')
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+- Relative imports in TypeScript files
+
+---
+id: windows-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export function foo() {})
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+- Named exports in TypeScript files
+
+---
+id: windows-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Test Location
+
+## Action
+
+Place test files in a separate test location, not alongside source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Absence of test files in srcLayout
+
+---
+id: windows-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a recognized prefix such as 'chore:' or 'feat:'
+
+## Evidence
+
+- Seen in commit 'chore: Update generated dev docs (#4786)'
+- Seen in commit 'feat: Add AGENTS.md and SPEC.md for project guidelines and instructions'
+
+---
+id: windows-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, averaging around 44 characters
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples of short commit messages
+
+---
+id: windows-instinct-update-preset-configuration
+trigger: "When someone wants to change or update the application's preset configuration"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Update Preset Configuration
+
+## Action
+
+Edit config/preset.json and commit with a message referencing preset updates
+
+## Evidence
+
+- Workflow: update-preset-configuration
+- Commits editing config/preset.json
+
+---
+id: windows-instinct-update-tweaks-configuration
+trigger: "When someone wants to change the available tweaks or their settings"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Update Tweaks Configuration
+
+## Action
+
+Edit config/tweaks.json and commit with a message referencing tweaks updates
+
+## Evidence
+
+- Workflow: update-tweaks-configuration
+- Commits editing config/tweaks.json
+
+---
+id: windows-instinct-update-generated-dev-docs
+trigger: "When someone adds or modifies tweaks and needs to update the corresponding dev documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/windows
+---
+
+# Windows Instinct Update Generated Dev Docs
+
+## Action
+
+Generate or update markdown files in docs/content/dev/tweaks/ and commit with a message referencing dev docs update
+
+## Evidence
+
+- Workflow: update-generated-dev-docs
+- Commits updating docs/content/dev/tweaks/**/*.md
+
